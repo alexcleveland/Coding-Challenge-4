@@ -35,10 +35,10 @@ function checkLowStock() {
         );}
 
 // Task 5 Create a function to calculate total inventory value 
-
 function calculateInventoryValue() {
-return inventory.reduce((total, product)=> total +(product.price *product.quantity));
-}
+    const totalValue = inventory.reduce((total, product) => total + (product.price * product.quantity), 0);
+    console.log(`Total Inventory Value: $${totalValue}`);
+    return totalValue;}
 
-        
-        
+
+       
