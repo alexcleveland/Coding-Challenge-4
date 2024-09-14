@@ -6,3 +6,15 @@ const Inventory = [
     {name: 'Earbuds', price: 300, quantity: 30, lowStockLevel: 5},
     {name: 'Desktop', price: 1500, quantity: 6, lowStockLevel: 1},
 ];
+
+// Task 2 Create a Function to Display Product Details
+function displayProdcuctDetails(product){
+    const stockStat = product.quantity <=product.lowStockLevel
+    ?"Low Stock" :"In Stock"
+    console.log(`Product Name:${product.name}`);
+    console.log(`Price: $${product.price}`);
+    console.log(`Stock Level: ${stockstat}`);
+    console.log(`Number in Stock: ${prodcuct.quantity}`);
+    }
+
+    
