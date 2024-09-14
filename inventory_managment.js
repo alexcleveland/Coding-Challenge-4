@@ -1,5 +1,5 @@
 // Task 1 Create an Inventory Array of Product Objects 
-const Inventory = [
+const inventory = [
     {name: 'Laptop', price: 1100, quantity: 15, lowStockLevel: 2 },
     {name: 'Cellphone', price: 1000, quantity: 9, lowStockLevel: 1 },
     {name: 'TV', price: 2000, quantity: 11, lowStockLevel: 2 },
@@ -29,10 +29,16 @@ function updateStock(product, unitsSold) {
 // Task 4 Create a Function to Check Low Stock Products
 
 function checkLowStock() {
-    Inventory.forEach(prodcuct =>
+    inventory.forEach(prodcuct =>
         prodcuct.quantity <= product.lowStockLevel && 
         console.log(`${product.name} Low stock`)
         );}
+
+// Task 5 Create a function to calculate total inventory value 
+
+function calculateInventoryValue() {
+return inventory.reduce((total, product)=> total +(product.price *product.quantity));
+}
 
         
         
