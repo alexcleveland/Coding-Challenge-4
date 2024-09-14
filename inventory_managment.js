@@ -8,13 +8,13 @@ const inventory = [
 ];
 
 // Task 2 Create a Function to Display Product Details
-function displayProdcuctDetails(product){
+function displayProductDetails(product){
     const stockStat = product.quantity <=product.lowStockLevel
-    ?"Low Stock" :"In Stock"
+    ? "Low Stock" :"In Stock";
     console.log(`Product Name:${product.name}`);
     console.log(`Price: $${product.price}`);
-    console.log(`Stock Level: ${stockstat}`);
-    console.log(`Number in Stock: ${prodcuct.quantity}`);
+    console.log(`Stock Level: ${stockStat}`);
+    console.log(`Number in Stock: ${product.quantity}`);
     }
 
 // Task 3 Create Function to Update Product Stock After Sales
@@ -28,9 +28,9 @@ function updateStock(product, unitsSold) {
 
 // Task 4 Create a Function to Check Low Stock Products
 
-function checkLowStock() {
-    inventory.forEach(prodcuct =>
-        prodcuct.quantity <= product.lowStockLevel && 
+function checkLowStock(){
+    inventory.forEach(product =>
+        product.quantity <= product.lowStockLevel && 
         console.log(`${product.name} Low stock`)
         );}
 
@@ -41,4 +41,19 @@ function calculateInventoryValue() {
     return totalValue;}
 
 
-       
+ // Task 6 Create function to process a sale
+
+function processSale(productName, unitsSold){
+    const product= inventory.find(item => item.name === productName);
+    if (product){
+        updateStock(product, unitsSold);}
+        else {
+            console.log(`Error: ${productName} Not Found`)};
+        }
+
+
+        //Here is a list of the console commands for the functions
+        //for the displayProductDetails function you need to type "displayProductDetails(inventory,?) the ?= a number 0-4
+        //for updateStock function that is updatestock(productname, than a number sold or removed)
+        // calculateInventoryValue is calculateInventoryValue()
+        //processSale is processSale("product Name", then a number)
